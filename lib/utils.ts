@@ -24,11 +24,8 @@ export const schema = z.object({
     .describe(
       "A brief description of the image to be used as alt text. In this description, do not describe or extract text from the image. Example: Lines of code in a text editor."
     ),
-  text: z
-    .string()
-    .optional()
-    .describe(
-      "The text OCR extracted from the image, if any. Include newlines where applicable. Un-obstruct text if there is something covering it, to make it readable. Do not include if there is no text. Example: const x = 5; const y = 10; const z = x + y; console.log(z);"
-    ),
+  text: z.string().describe(
+    "The text OCR extracted from the image, if any. Include newlines where applicable. Un-obstruct text if there is something covering it, to make it readable. If there is no text, return an empty string. Example: const x = 5; const y = 10; const z = x + y; console.log(z);"
+  ),
 });
 

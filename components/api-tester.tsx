@@ -46,7 +46,7 @@ export function ApiTester() {
         <Label htmlFor="endpoint" className="sr-only">
           Endpoint
         </Label>
-        <Input id="endpoint" type="text" name="endpoint" defaultValue="/api/hello" placeholder="/api/hello" />
+        <Input id="endpoint" type="text" name="endpoint" defaultValue="/api/convert" placeholder="/api/convert" />
         <Button type="submit" variant="secondary">
           Send
         </Button>

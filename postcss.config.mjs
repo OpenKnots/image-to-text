@@ -1,14 +1,5 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
+export default {
+  plugins: {
+    "@tailwindcss/postcss": {},
   },
-  images: {
-    unoptimized: true,
-  },
-//  redirects: async () => {
-//   return []
-//   },
-}
-
-export default nextConfig
+};

@@ -1,33 +1,38 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ApiTester } from "@/components/api-tester";
+import Converter from "@/components/converter";
 
 export function Landing() {
   return (
-    <div className="container mx-auto p-8 text-center relative z-10">
-      <div className="flex justify-center items-center gap-8 mb-8">
-        <img
-          src="/logo.svg"
-          alt="Bun Logo"
-          className="h-36 p-6 transition-all duration-300 hover:drop-shadow-[0_0_2em_#646cffaa] scale-120"
-        />
-        <img
-          src="/react.svg"
-          alt="React Logo"
-          className="h-36 p-6 transition-all duration-300 hover:drop-shadow-[0_0_2em_#61dafbaa] [animation:spin_20s_linear_infinite]"
-        />
+    <section className="w-full max-w-3xl mx-auto">
+      <div className="glass-panel rounded-3xl px-6 py-8 sm:px-10 sm:py-10 space-y-6">
+        <div className="space-y-2 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+            Image to Text
+          </p>
+          <h1 className="text-3xl sm:text-4xl font-semibold text-foreground">
+            Clean extraction. Instant results.
+          </h1>
+          <p className="text-sm sm:text-base text-muted-foreground">
+            Drop any image and capture crisp text in seconds.
+          </p>
+        </div>
+
+        <Converter />
+
+        <div className="glass-divider" />
+
+        <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-muted-foreground">
+          <span className="glass-subtle rounded-full px-4 py-2">
+            No storage
+          </span>
+          <span className="glass-subtle rounded-full px-4 py-2">
+            Paste anywhere
+          </span>
+          <span className="glass-subtle rounded-full px-4 py-2">
+            Export-ready
+          </span>
+        </div>
       </div>
-      <Card>
-        <CardHeader className="gap-4">
-          <CardTitle className="text-3xl font-bold">Image to Text</CardTitle>
-          <CardDescription>
-            Upload an image and get the text extracted from it.
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <ApiTester />
-        </CardContent>
-      </Card>
-    </div>
+    </section>
   );
 }
 
