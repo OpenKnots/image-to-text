@@ -1,4 +1,4 @@
-# bun-react-tailwind-shadcn-template
+# image-to-text
 
 To install dependencies:
 
@@ -12,10 +12,16 @@ To start a development server:
 bun dev
 ```
 
+To build for production:
+
+```bash
+bun build
+```
+
 To run for production:
 
 ```bash
 bun start
 ```
 
-This project was created using `bun init` in bun v1.3.5. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+This is a Next.js App Router project. Use Bun to run the scripts above.
